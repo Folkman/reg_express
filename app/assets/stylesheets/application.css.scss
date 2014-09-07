@@ -1,0 +1,91 @@
+$chasm_position: 750px;
+$track_position: 250px;
+$background_color: lightblue;
+
+body { background: $background_color; margin: 0; min-height: 560px; position: relative; }
+
+.title { text-align: center; color: white; background: black; padding: 5px; }
+
+.targets {
+  text-align: center;
+  h1, p { display: inline-block; }
+
+  .target { display: inline-block; width: 300px; }
+}
+
+.regex_input {
+  color: red;
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 777;
+
+  span { vertical-align: sub; }
+}
+
+#regex {
+  height: 30px;
+  color: red;
+  font-size: 24px;
+  border: 2px solid red;
+}
+
+#train {
+  background: black;
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  bottom: $track_position + 10;
+  left: 0;
+  z-index: 5;
+
+  p { text-align: center; color: white; padding: 0; margin: 7px; }
+}
+
+#tracks {
+  background: grey;
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: $track_position;
+  left: 0;
+}
+
+#ground {
+  background: green;
+  height: $track_position;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#chasm {
+  background: $background_color;
+  height: $track_position + 10;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: $chasm_position;
+}
+
+#bridge {
+  background: grey;
+  height: 10px;
+  width: 300px;
+  position: absolute;
+  bottom: $track_position;
+  left: $chasm_position - 300;
+}
+
+#depot {
+  color: white;
+  background: brown;
+  height: 90px;
+  width: 175px;
+  position: absolute;
+  bottom: $track_position + 10;
+  left: $chasm_position + 330;
+
+  p { text-align: center; color: black; background-color: yellow; }
+}
